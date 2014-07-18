@@ -36,11 +36,11 @@
 		<property name="preferredTestQuery" value="select 1" />
 	</bean>
 	
-	<bean id="dataSourcePool" class="com.snda.youni.commons.db.sharding.DataSourcePool">
+	<bean id="dataSourcePool" class="com.moreopen.commons.db.sharding.DataSourcePool">
 		<property name="dbSize" value="2"/>
 		<property name="pool">
 			<list>
-				<bean class="com.snda.youni.commons.db.sharding.IndexedDataSource">
+				<bean class="com.moreopen.commons.db.sharding.IndexedDataSource">
 					<constructor-arg name="index" value="0"/>
 					<constructor-arg name="dataSource" ref="dataSource0"/>
 				</bean>
@@ -48,11 +48,11 @@
 		</property>
 	</bean>
 	
-	<bean id="jdbcTemplates" class="com.snda.youni.commons.db.sharding.JdbcTemplates">
+	<bean id="jdbcTemplates" class="com.moreopen.commons.db.sharding.JdbcTemplates">
 		<property name="dataSourcePool" ref="dataSourcePool"/>
 	</bean>
 	
-	<bean id="shardingIndexFactory" class="com.snda.youni.commons.db.sharding.ShardingIndexFactory">
+	<bean id="shardingIndexFactory" class="com.moreopen.commons.db.sharding.ShardingIndexFactory">
 		<property name="dbSize" value="2"/>
 		<property name="tableSizePerDb" value="16"/>
 	</bean>
