@@ -1,5 +1,5 @@
 1. db sharding 适用于数据库作水平切分访问；
 2. 封转了分库分表数据库访问的通用逻辑，使开发者只需要关注本身的业务；
-3. 开发者可参考 com.snda.youni.commons.db.sharding.ShardingDaoIntegrationTest 测试用例；
+3. 开发者可参考 com.moreopen.commons.db.sharding.ShardingDaoIntegrationTest 测试用例；
 4. 当数据量达到一定程度，要扩容时，可参考：sharding.db.context.xml 中建议； 
 5.
