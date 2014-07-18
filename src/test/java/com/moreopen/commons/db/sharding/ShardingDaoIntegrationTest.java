@@ -1,4 +1,4 @@
-package com.snda.youni.commons.db.sharding;
+package com.moreopen.commons.db.sharding;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,6 +14,11 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.util.Assert;
+
+import com.moreopen.commons.db.sharding.DatabaseIndex;
+import com.moreopen.commons.db.sharding.JdbcTemplates;
+import com.moreopen.commons.db.sharding.ObjectHashedKey;
+import com.moreopen.commons.db.sharding.ShardingIndexFactory;
 
 @ContextConfiguration(locations={"classpath:sharding.db.context.xml"})
 public class ShardingDaoIntegrationTest extends AbstractJUnit4SpringContextTests {

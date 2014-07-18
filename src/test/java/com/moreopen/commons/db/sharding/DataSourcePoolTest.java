@@ -1,4 +1,4 @@
-package com.snda.youni.commons.db.sharding;
+package com.moreopen.commons.db.sharding;
 
 import java.beans.PropertyVetoException;
 
@@ -7,6 +7,9 @@ import org.junit.Test;
 import org.springframework.util.Assert;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.moreopen.commons.db.sharding.DataSourcePool;
+import com.moreopen.commons.db.sharding.DatabaseIndex;
+import com.moreopen.commons.db.sharding.IndexedDataSource;
 
 public class DataSourcePoolTest {
 	

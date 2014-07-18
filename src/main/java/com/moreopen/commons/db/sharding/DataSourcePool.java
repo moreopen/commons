@@ -1,4 +1,4 @@
-package com.snda.youni.commons.db.sharding;
+package com.moreopen.commons.db.sharding;
 
 import java.util.ArrayList;
 import java.util.List;

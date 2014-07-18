@@ -1,4 +1,4 @@
-package com.snda.youni.commons.db.sharding;
+package com.moreopen.commons.db.sharding;
 
 import javax.sql.DataSource;
 

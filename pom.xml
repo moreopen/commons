@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-   <groupId>com.snda.youni.commons</groupId>
+   <groupId>com.moreopen.commons</groupId>
   	<artifactId>commons-db</artifactId>
 	<version>0.0.1</version>
   
@@ -10,7 +10,6 @@
 		<slf4j.version>1.5.8</slf4j.version>
 		<log4j.version>1.2.16</log4j.version>
 		<junit.version>4.8.1</junit.version>
-		<repository.address>10.241.37.57:8081</repository.address>
 		<spring.version>3.0.5.RELEASE</spring.version>
 	</properties>
 

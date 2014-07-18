@@ -1,4 +1,4 @@
-package com.snda.youni.commons.db.sharding;
+package com.moreopen.commons.db.sharding;
 
 import java.beans.PropertyVetoException;
 import java.sql.ResultSet;
@@ -14,6 +14,12 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.Assert;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.moreopen.commons.db.sharding.DataSourcePool;
+import com.moreopen.commons.db.sharding.DatabaseIndex;
+import com.moreopen.commons.db.sharding.IndexedDataSource;
+import com.moreopen.commons.db.sharding.JdbcTemplates;
+import com.moreopen.commons.db.sharding.ObjectHashedKey;
+import com.moreopen.commons.db.sharding.ShardingIndexFactory;
 
 public class ShardingDaoTest {
 	

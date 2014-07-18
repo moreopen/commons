@@ -1,4 +1,4 @@
-package com.snda.youni.commons.db.sharding;
+package com.moreopen.commons.db.sharding;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

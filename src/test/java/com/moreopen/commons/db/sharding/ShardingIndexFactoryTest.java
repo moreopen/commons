@@ -1,8 +1,14 @@
-package com.snda.youni.commons.db.sharding;
+package com.moreopen.commons.db.sharding;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.util.Assert;
+
+import com.moreopen.commons.db.sharding.DatabaseIndex;
+import com.moreopen.commons.db.sharding.HashedKey;
+import com.moreopen.commons.db.sharding.ObjectHashedKey;
+import com.moreopen.commons.db.sharding.ShardingIndexFactory;
+import com.moreopen.commons.db.sharding.SpecifiedHashedKey;
 
 public class ShardingIndexFactoryTest {
 
