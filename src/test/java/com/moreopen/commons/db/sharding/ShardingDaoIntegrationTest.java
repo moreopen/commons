@@ -15,11 +15,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.util.Assert;
 
-import com.moreopen.commons.db.sharding.DatabaseIndex;
-import com.moreopen.commons.db.sharding.JdbcTemplates;
-import com.moreopen.commons.db.sharding.ObjectHashedKey;
-import com.moreopen.commons.db.sharding.ShardingIndexFactory;
-
 @ContextConfiguration(locations={"classpath:sharding.db.context.xml"})
 public class ShardingDaoIntegrationTest extends AbstractJUnit4SpringContextTests {
 	
@@ -35,7 +30,7 @@ public class ShardingDaoIntegrationTest extends AbstractJUnit4SpringContextTests
 	
 	@Test
 	public void test() {
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 1; i++) {
 			String resourceId = "rid-0000000" + i;
 			long sdid = 13818088962l + i;
 			
