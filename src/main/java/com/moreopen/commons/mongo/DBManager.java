@@ -31,6 +31,15 @@ public class DBManager implements InitializingBean, DisposableBean {
      *	private static final ReadPreference _NEAREST; 4
 	 */
 	private int readPreferenceType = 0;
+	
+	/**
+	 * please {@see MongoOptions}
+	 */
+	private int connectTimeout = 5000;
+	
+	private int socketTimeout = 5000;
+	
+	private int maxWaitTime = 30000;
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
@@ -42,8 +51,10 @@ public class DBManager implements InitializingBean, DisposableBean {
 		}
 		MongoOptions mongoOptions = mongo.getMongoOptions();
 		mongoOptions.setAutoConnectRetry(true);
-		mongoOptions.setConnectTimeout(5000);
+		mongoOptions.setConnectTimeout(connectTimeout);
 		mongoOptions.setConnectionsPerHost(connectionsPerHost);
+		mongoOptions.setSocketTimeout(socketTimeout);
+		mongoOptions.setMaxWaitTime(maxWaitTime);
 
 		if (readPreferenceType == 0) {
 			mongo.setReadPreference(ReadPreference.primary());
@@ -106,6 +117,18 @@ public class DBManager implements InitializingBean, DisposableBean {
 
 	public void setReadPreferenceType(int readPreferenceType) {
 		this.readPreferenceType = readPreferenceType;
+	}
+
+	public void setConnectTimeout(int connectTimeout) {
+		this.connectTimeout = connectTimeout;
+	}
+
+	public void setSocketTimeout(int socketTimeout) {
+		this.socketTimeout = socketTimeout;
+	}
+
+	public void setMaxWaitTime(int maxWaitTime) {
+		this.maxWaitTime = maxWaitTime;
 	}
 
 }
