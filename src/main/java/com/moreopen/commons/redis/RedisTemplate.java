@@ -122,7 +122,7 @@ public class RedisTemplate implements InitializingBean {
 		}
 	}
 
-	private <T> T excuteCommand(JedisCommandExecutor<T> executor, Object... argArray) throws JedisException {
+	protected <T> T excuteCommand(JedisCommandExecutor<T> executor, Object... argArray) throws JedisException {
 		ShardedJedis resource = null;
 		boolean isConnException = false;
 		try {
